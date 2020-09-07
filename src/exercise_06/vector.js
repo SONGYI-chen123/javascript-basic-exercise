@@ -11,6 +11,28 @@ export default class Vector {
   // * Please implement the class and pass all the tests in vector_spec.js.
   // * Please do NOT modify the signature of the class. Please put all your code in the Vector
   // class.
+  constructor(x, y) {
+    this.a = x;
+    this.b = y;
+  }
 
-  // PLEASE DELETE THIS LINE AND ADD YOUR IMPLEMENTATION HERE
+  get x() {
+    return this.a;
+  }
+
+  get y() {
+    return this.b;
+  }
+
+  static plus(vector1, vector2) {
+    return new Vector(vector1.x + vector2.x, vector1.y + vector2.y);
+  }
+
+  static minus(vector1, vector2) {
+    return new Vector(vector1.x - vector2.x, vector1.y - vector2.y);
+  }
+
+  distance() {
+    return Math.hypot(this.x, this.y);
+  }
 }
