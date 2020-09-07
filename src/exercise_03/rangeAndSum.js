@@ -34,5 +34,5 @@ export function sum(...numbers) {
     Addsum += numbers[i];
   }
   return Addsum;
-  throw new Error('Please delete this line and implement the function');
+
 }
